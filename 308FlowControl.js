@@ -34,7 +34,7 @@ const maxPlants =  area / requiredSpace;
 const growthRate = 2;
 
 // maximum capacity of the garden
-console.log(`The total capacity of the graen is: ${maxPlants}`);
+console.log(`The total capacity of the garden is: ${maxPlants}`);
 
 // *** Week 1 ***
 console.log('================= ***Week 1 **** ===================================');
@@ -42,41 +42,43 @@ let plantsWeek1 = initialPlants * growthRate;
 console.log(`The number of plants after week 1 is: ${plantsWeek1}`);
 
 // we need to check if the plants are exceeding the capacity of the garden
-if (plantsWeek1 > maxPlants * 0.8) {
-    console.log('Prune the plants');
+if (plantsWeek1 < maxPlants * 0.5){
+    console.log('Plant more plants, the count is less than 50% of the maximum capacity of the garden');
 }
-else if ((plantsWeek1 > maxPlants * 0.5)&& (plantsWeek1 < maxPlants * 0.8)) {
-    console.log('Monitor the plants');
+else if ((plantsWeek1 >= maxPlants * 0.5) && (plantsWeek1 < maxPlants * 0.8)){
+    console.log('Monitor the plants, the count is between 50% and 80% of the maximum capacity of the garden');
 }
 else {
-    console.log('Plant more plants');
+    console.log('Prune the plants, the count is greater than 80% of the maximum capacity of the garden');
 }
-
 // *** Week 2 ***
 console.log('================= ***Week 2 **** ===================================');
 let plantsWeek2 = plantsWeek1 * growthRate;
 console.log(`The number of plants after week 2 is: ${plantsWeek2}`);
-if (plantsWeek2 > maxPlants * 0.8) {
-    console.log('Prune the plants');
+
+// we need to check if the plants are exceeding the capacity of the garden
+if (plantsWeek2 < maxPlants * 0.5){
+    console.log('Plant more plants, the count is less than 50% of the maximum capacity of the garden');
 }
-else if ((plantsWeek2 > maxPlants * 0.5) && (plantsWeek2 < maxPlants * 0.8)) {
-    console.log('Monitor the plants');
+else if ((plantsWeek2 > maxPlants * 0.5) && (plantsWeek2 < maxPlants * 0.8)){
+    console.log('Monitor the plants, the count is between 50% and 80% of the maximum capacity of the garden');
 }
 else {
-    console.log('Plant more plants');
+    console.log('Prune the plants, the count is greater than 80% of the maximum capacity of the garden');
 }
-
 // *** Week 3 ***
 console.log('================= ***Week 3 **** ===================================');
 let plantsWeek3 = plantsWeek2 * growthRate;
 console.log(`The number of plants after week 3 is: ${plantsWeek3}`);
-if (plantsWeek3 > maxPlants * 0.8) {
-    console.log('Prune the plants');
+// we need to check if the plants are exceeding the capacity of the garden
+
+if (plantsWeek3 < maxPlants * 0.5){
+    console.log('Plant more plants, the count is less than 50% of the maximum capacity of the garden');
 }
-else if ((plantsWeek3 > maxPlants * 0.5)&& (plantsWeek3 < maxPlants * 0.8)) {
-    console.log('Monitor the plants');
+else if ((plantsWeek3 > maxPlants * 0.5) && (plantsWeek3 < maxPlants * 0.8)){
+    console.log('Monitor the plants, the count is between 50% and 80% of the maximum capacity of the garden');
 }
 else {
-    console.log('Plant more plants');
+    console.log('Prune the plants, the count is greater than 80% of the maximum capacity of the garden');
 }
 
