@@ -82,3 +82,32 @@ else {
     console.log('Prune the plants, the count is greater than 80% of the maximum capacity of the garden');
 }
 
+
+
+//     ***** Part 2 *****
+
+/*
+Part 2: Thinking Bigger
+The conservation area in which the garden is located has multiple other gardens. 
+Using the logic you have already created, determine:
+The amount of additional space that would be required if the scientists were to start with 100 plants, and did not prune them for 10 weeks.
+If the space remained circular, what would be the radius of this expanded garden?
+*/
+let initialPlants2 = 100;
+let weeks = 10;
+
+
+//  *** Week 10 ***
+console.log('================= ***Week 10 **** ===================================');
+// to calculate the nr of plants after 10 weeks, we can use the formula: initialPlants * growthRate^weeks
+let plantsWeek10 = initialPlants2 * Math.pow(growthRate, weeks);
+console.log(`The number of plants after week 10 is: ${plantsWeek10}`);
+// the required space for the plants after 10 weeks
+let requiredSpace10 = plantsWeek10 * requiredSpace;
+console.log(`The required space for the plants after 10 weeks is: ${requiredSpace10} square meters`);
+// the aditional space that would be required
+let additionalSpace = requiredSpace10 - area;
+console.log(`The additional space that would be required is: ${additionalSpace} square meters`);
+// the radius of the expanded garden
+let radius2 = Math.sqrt((additionalSpace / PI));
+console.log(`The radius of the expanded garden is: ${radius2} meters`);
