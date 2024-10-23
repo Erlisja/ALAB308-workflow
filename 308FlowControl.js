@@ -111,3 +111,24 @@ console.log(`The additional space that would be required is: ${additionalSpace} 
 // the radius of the expanded garden
 let radius2 = Math.sqrt((additionalSpace / PI));
 console.log(`The radius of the expanded garden is: ${radius2} meters`);
+
+//  ***** Part 3 *****
+// Part 3: Errors in Judgement
+/*
+The scientists decided not to listen to your recommendations, and have instead started with 100 plants in the original 5-meter-radius garden.
+Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants
+exceeds the amount of space available, throw a new error and log an appropriate message.
+*/
+
+try {
+    let plants = 100;
+    let requiredSpace100 = plants * requiredSpace;
+    if (requiredSpace100> area){
+        throw new Error('The amount of space required to hold the originally provided number of plants exceeds the amount of space available');
+    }
+    console.log(`The amount of space required to hold the originally provided number of plants is: ${requiredSpace} square meters`);
+}
+catch (error){
+    console.log(error.message);
+}
+
